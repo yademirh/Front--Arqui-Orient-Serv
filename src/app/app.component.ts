@@ -1,25 +1,25 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AguacateComponent } from './aguacate/aguacate.component';
+import { HijoComponent } from './hijo/hijo.component';
+import { OtroHijoComponent } from "./otro-hijo/otro-hijo.component";
+
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AguacateComponent],
+  imports: [RouterOutlet, HijoComponent, OtroHijoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title : string = 'CarStorage';
+  title : string = 'FLDSMDFR';
 
+  texto : string = "esto es un texto";
 
+  ver : boolean = true;
 
-  numero : number = 5;
-
-  reset(){
-    this.numero = 0;
-  }
-  restar(opa : number){
-    this.numero -= opa;
+  change_okas(t: boolean){
+    this.ver = t;
   }
 }

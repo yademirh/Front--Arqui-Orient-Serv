@@ -1,11 +1,8 @@
-<h1>
-  Cantidad de Clicks {{ numero }}
-</h1>
 
-<button (click)="numero=numero+1"> Sumar 1</button>
-<br><br>
-<button (click)="reset()"> Reset </button>
-<br><br>
-<button (click)="restar(5)"> Restar 5 </button>
+<h1>Holaa opa</h1>
 
-<app-aguacate></app-aguacate>
+<app-hijo [mensaje]="texto" (c)="change_okas($event)"></app-hijo>
+
+@if(ver){
+    <app-otro-hijo></app-otro-hijo>
+}

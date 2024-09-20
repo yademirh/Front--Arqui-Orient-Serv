@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AguacateComponent } from './aguacate.component';
+import { OtroHijoComponent } from './otro-hijo.component';
 
-describe('AguacateComponent', () => {
-  let component: AguacateComponent;
-  let fixture: ComponentFixture<AguacateComponent>;
+describe('OtroHijoComponent', () => {
+  let component: OtroHijoComponent;
+  let fixture: ComponentFixture<OtroHijoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AguacateComponent]
+      imports: [OtroHijoComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AguacateComponent);
+    fixture = TestBed.createComponent(OtroHijoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
