@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IzquierdaComponent } from './izquierda.component';
+import { NuevoXdComponent } from './nuevo-xd.component';
 
-describe('IzquierdaComponent', () => {
-  let component: IzquierdaComponent;
-  let fixture: ComponentFixture<IzquierdaComponent>;
+describe('NuevoXdComponent', () => {
+  let component: NuevoXdComponent;
+  let fixture: ComponentFixture<NuevoXdComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IzquierdaComponent]
+      imports: [NuevoXdComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(IzquierdaComponent);
+    fixture = TestBed.createComponent(NuevoXdComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

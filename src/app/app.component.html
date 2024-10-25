@@ -1,8 +1,11 @@
-<h1>Hello world</h1>
+<h1>Hola mundo</h1>
 
-<div class="flex">
-    <div><app-izquierda></app-izquierda></div>
-    <div><app-derecha></app-derecha></div>
-</div>
+<ul style="font-weight: 600; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; list-style: none; text-align: center; display: flex; flex-direction: column; gap: 10px; font-size: 20px; width: 20%; border: 1px solid; padding: 10px; margin-left: 2%; border-radius: 0.5em;">
+    <li style="background-color: #ededed;"> <a style="color: black; text-decoration: none;" routerLink="home"> Home </a> </li>
+    <li style="background-color: #ededed;"> <a style="color: black;  text-decoration: none;" routerLink="administrador/producto/"> Product </a> </li>
+    <li style="background-color: #ededed;"> <a style="color: black; text-decoration: none;" routerLink="administrador/usuario/"> User </a> </li>
+</ul>
 
-<app-character></app-character>
+<router-outlet></router-outlet>
+
+<p>Esto es el footer</p>
