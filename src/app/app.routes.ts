@@ -1,38 +1,27 @@
 import { Routes } from '@angular/router';
-import { ErrorComponent } from './publico/pages/error/error.component';
-import { OtroComponent } from './administrador/usuarios/pages/otro/otro.component';
+import { AuthComponent } from './home/pages/auth/auth.component';
+import { ProductComponent } from './admin/product/pages/product/product.component';
+import { ProductOnlyComponent } from './admin/product/pages/product-only/product-only.component';
+import { protectionGuard } from './guards/protection.guard';
+
 
 export const routes: Routes = [
-    {
-        path: '',
-        redirectTo: "home",
-        pathMatch: "full"
-    },
-    {
-        path: "home",
-        loadComponent: () => import("./publico/pages/home/home.component")
-    },
-    {
-        path: "administrador",
-        children: [
-            {
-                path: 'producto',
-                loadChildren: () => import("./administrador/productos/producto.routes").then(r => r.routesProducto)
-            },
-            {
-                path: 'usuario',
-                loadComponent: () => import("./administrador/usuarios/pages/usuario/usuario.component"),
-                children: [
-                    {
-                        path: "otro",
-                        component: OtroComponent
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        path: "**",
-        component: ErrorComponent
-    }
+  {
+    path: "",
+    component: AuthComponent
+  },
+  {
+    path: "admin",
+    canActivate: [ protectionGuard ],
+    children: [
+      {
+        path: "product",
+        component: ProductComponent
+      },
+      {
+        path: "product/:id",
+        component: ProductOnlyComponent
+      }
+    ]
+  }
 ];
