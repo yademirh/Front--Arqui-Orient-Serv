@@ -1,3 +1,22 @@
 
-<h1>hola mundo</h1>
+<h1>hola mundo: {{prueba}} ---</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of producto$ | async; track $index) {
+            <tr>
+                <td> {{item.title}} </td>
+                <td>
+                    <img [ngSrc]="item.images[0]" width="300" height="300">
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
 <router-outlet></router-outlet>
